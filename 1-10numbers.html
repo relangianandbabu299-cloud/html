@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1 to 10 Using Loops</title>
+</head>
+<body>
+  <h3>Using while loop:</h3>
+  <div id="whileResult"></div>
+
+  <h3>Using do while loop:</h3>
+  <div id="doWhileResult"></div>
+
+  <script>
+    // Using while loop
+    var i = 1, output = "";
+    while(i <= 10) {
+      output += i + "<br>";
+      i++;
+    }
+    document.getElementById("whileResult").innerHTML = output;
+
+    // Using do while loop
+    var j = 1, output2 = "";
+    do {
+      output2 += j + "<br>";
+      j++;
+    } while(j <= 10);
+    document.getElementById("doWhileResult").innerHTML = output2;
+  </script>
+</body>
+</html>

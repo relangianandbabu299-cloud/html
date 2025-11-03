@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial & Fibonacci Calculator</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { margin: 10px 0; padding: 8px; }
+    #result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Factorial & Fibonacci Calculator</h2>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput" min="0" />
+  <br/>
+  <button onclick="Factorial()"> Factorial</button>
+  <button onclick="Fibonacci()"> Fibonacci</button>
+  <div id="result"></div>
+  <script>
+    function Factorial() {
+      const num = parseInt(document.getElementById('numberInput').value);
+      let result = 1;
+      for (let i = 2; i <= num; i++) {
+        result *= i;
+      }
+      document.getElementById('result').innerText = `Factorial of ${num} is ${result}`;
+    }
+    function Fibonacci() {
+      const num = parseInt(document.getElementById('numberInput').value);
+      let a = 0, b = 1, temp;
+      if (num === 0) {
+        document.getElementById('result').innerText = `Fibonacci of 0 is 0`;
+        return;
+      }
+      for (let i = 2; i <= num; i++) {
+        temp = a + b;
+        a = b;
+        b = temp;
+      }
+      document.getElementById('result').innerText = `Fibonacci of ${num} is ${b}`;
+    }
+  </script>
+</body>
+</html>

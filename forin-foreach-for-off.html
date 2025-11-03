@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterate Object in JavaScript</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 30px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        .output {
+            text-align: left;
+            margin: 0 auto;
+            width: 300px;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        function displayStudentDetails() {
+            let student = {
+                name: "Anand",
+                age: 22,
+                city: "Rajahmundry"
+            };
+
+            let output = "<h2>Using for...in:</h2><div class='output'>";
+            for (let key in student) {
+                output += key + ": " + student[key] + "<br>";
+            }
+            output += "</div>";
+
+            output += "<h2>Using Object.keys().forEach:</h2><div class='output'>";
+            Object.keys(student).forEach(function(key) {
+                output += key + ": " + student[key] + "<br>";
+            });
+            output += "</div>";
+
+            output += "<h2>Using for...of with Object.entries:</h2><div class='output'>";
+            for (let [key, value] of Object.entries(student)) {
+                output += key + ": " + value + "<br>";
+            }
+            output += "</div>";
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body onload="displayStudentDetails()">
+    <h1>Student Object Iteration</h1>
+    <div id="result"></div>
+</body>
+</html>

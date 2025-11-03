@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array object properties and methods</title>
+</head>
+<body>
+    <h2>Array object Example</h2>
+    <p id="output"></p>
+    <script>
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let length = fruits.length;
+        fruits.push("orange");
+        fruits.unshift("grapes");
+        begginning
+        let lastModified = fruits.pop();
+        let first = fruits.shift();
+        let sorted = fruits.sort(); 
+        let joined = fruits.join(",");
+        String
+        document.getElementById("output").innerHTML =
+        "<b>original length:</b> " + length + "<br>" +
+        "<b>after push & unshift:</b> Apple, Mango, orange, Banana, Orange, Grapes <br>" +
+        "<b>Removed last:</b> " + last+ "<br>" +
+        "<b>Removed first:</b> " + first + "<br>" +
+        "<b>Sorted Array:</b> " + sorted + "<br>" +
+        "<b>Joined as string:</b> " + joined;
+    </script>  
+</body>
+</html>

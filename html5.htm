@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>html5 semantic element demo</title>
+        <style>
+            body{
+                font-family: arial,sans-serif;
+                margin: 0;
+            }
+            header,nav,footer{
+                background-color: #333;
+                color: pink;
+                padding: 1em;
+            }
+            nav a{
+                color: pink;
+                margin: 0 10px;
+                text-decoration: none;
+            }
+            main{
+                display: flex;
+                padding: 20px;
+            }
+            article{
+                flex: 3;
+                padding: 20px;
+                background-color: #f9f9f9;
+            }
+            aside{
+                flex: 1;
+                padding: 20px;
+                background-color: #e0e0e0;
+            }
+            figure{
+                margin: 0;
+                text-align: center;
+            }
+            figcaption{
+               font-style: italic;
+               font-size: 0.9em;
+            }
+            footer{
+               text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>my blog website</h1>
+        </header>
+        <nav>
+            <a href="home.html">home</a>
+            <a href="">artical</a>
+            <a href="#">gallery</a>
+            <a href="#">contact</a>
+        </nav>
+        <main>
+            <artical>
+                <h2>understanding html5 semantic tags</h2>
+                <p><span style="font-weight: blod;">html5</span>introduced semantic elements that make your code more readable and accessible.</p>
+                <figure>
+                    <img src="https://wallpapercave.com/wp/wp7180399.png"height="500"alt="html5 illustration">
+                    <figcaption>figure : lord balaji</figcaption>
+                    </figure>
+                    <section>
+                        <h3>why use semantic tags?</h3>
+                        <p>semantic tags help search engines and screen readers understand the structure of your webpage.</p>
+                    </section>
+                   </artical>
+                   <aside>
+                    <h3>related posts</h3>
+                    <ul>
+                        <li><a href="https://maya.technicalhub.io/trainee-coding-dashboard">mayaportal</a></li>
+                         <li><a href="https://erp.adityauniversity.in/login.htm;jsessionid=D7FCF6561C4A931524D5F572405F8A9D">aditya university</a></li>
+                          <li><a href="http://127.0.0.1:8080/apex/f?p=4500:1000:2948454771399935">oracle</a></li>
+                    </ul>
+                   </aside>
+        </main>
+        <footer>
+            <p>&copy;2025 my blog,all rights reserved</p>
+        </footer>
+    </body>
+</html>

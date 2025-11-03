@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial using Function</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Find Factorial of a Number</h2>
+  <div id="output"></div>
+
+  <script>
+    // Function to calculate factorial
+    function factorial(num) {
+      let fact = 1;
+      for (let i = 1; i <= num; i++) {
+        fact *= i;
+      }
+      return fact;
+    }
+
+    // Taking input from user
+    let number = parseInt(prompt("Enter a non-negative integer:"));
+
+    // Validating input and displaying result
+    const outputDiv = document.getElementById("output");
+
+    if (isNaN(number) || number < 0) {
+      outputDiv.textContent = "Please enter a valid non-negative integer.";
+    } else {
+      const result = factorial(number);
+      outputDiv.textContent = "Factorial of " + number + " is " + result;
+    }
+  </script>
+</body>
+</html>

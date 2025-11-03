@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voter Eligibility Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: blue;
+            color: white;
+        }
+        input[type="number"] {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voter Eligibility Checker</h1>
+    <label for="ageInput">Enter your age:</label>
+    <input type="number" id="ageInput" min="0" placeholder="e.g. 18">
+    <button onclick="checkEligibility()">Check</button>
+
+    <table id="resultTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Eligibility</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="ageCell"></td>
+                <td id="eligibilityCell"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function checkEligibility() {
+            const age = parseInt(document.getElementById('ageInput').value);
+            const ageCell = document.getElementById('ageCell');
+            const eligibilityCell = document.getElementById('eligibilityCell');
+            const resultTable = document.getElementById('resultTable');
+
+            if (isNaN(age)) {
+                alert("Please enter a valid age.");
+                return;
+            }
+
+            ageCell.textContent = age;
+            eligibilityCell.textContent = age >= 18 ? "Eligible to vote ✅" : "Not eligible ❌";
+            resultTable.style.display = "table";
+        }
+    </script>
+</body>
+</html>

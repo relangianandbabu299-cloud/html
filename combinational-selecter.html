@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>css combinatorn selectors</title>
+        <style>
+            /* descendant selector */
+            div p{
+                color:yellow;
+            }
+            /* child selector(div >p) */
+            div >p{
+                background-color: lightcoral;
+            }  
+            /*adjacent sibling selector (h2 + p) */
+            h2 + p{
+                color: red;
+                font-weight: bold;
+            }
+            /* general sibling selector (h2 ~ p) */
+            h2 ~ p{
+                font-style: italic;
+            }
+            /* styling for visibility */
+            div, section{
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>css combinator selectors example</h1>
+        <div>
+            <p>child of div (affected by both descendant & child selectors)</p>
+            <section>
+                <p>descendant of div (only affected by descendant selector</p>
+            </section>
+        </div>
+        <h2>heading (h2)</h2>
+        <p>adjacent sibling (immediately after h2, styled red & bold)</p>
+        <p>general sibling (comes after h2, styled italic)</p>
+        <p>another general sibling (also italic)</p>
+    </body>
+</html>

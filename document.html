@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Objuect Example</title>
+</head>
+<body>
+    <h1 id="heading">Hello world!</h1>
+    <p> This is a demo of document object</p>
+    <button onclick="ShowInfo()">show Document Info</button>
+    <div> id="output"></div>
+    <script>
+        function ShowInfo(){
+            let title = document.title;
+            let url = document.URL;
+            let lastModified = document.lastModified;
+        
+        document.getElementById("heading").style.color = "red";
+        document.getElementById("output").innerHTML =
+        "Title: " + title + "<br>" +
+        "URL: " + url + "<br>" +    
+        "Last Modified: " + lastModified;
+    
+</body>
+</html>
